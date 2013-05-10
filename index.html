@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+	<div style="display: none">
+		<div id="myForms">
+			<form action="submitPage.html" method="POST" id="myForm1" target="myIframe">
+				User: <input type="text" id="username" name="username" />
+				Pass: <input type="password" id="password" name="password" />
+				<input type="submit" name="mySubmit" id="mySubmit" />
+			</form>
+			<form action="submitPage.html" method="POST" id="myForm2" target="myIframe">
+				User: <input type="text" id="username2" name="username" />
+				Pass: <input type="password" id="password2" name="password" />
+				<input type="submit" name="mySubmit" id="mySubmit2" />
+			</form>
+		</div>
+
+	</div>
+
+
+
+
+	<iframe id="myIframe" name="myIframe" src="submitPage.html"></iframe>
+
+	<div id="cloneMe">
+
+	</div>
+
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script>
+
+
+
+			//$("#myIframe" ).attr("src",);
+			$(function() {
+				setTimeout(function() {
+					//var html = '<form action="submitPage.html" method="POST" id="myForm">User: <input type="text" autocomplete="on" id="username" name="username" />Pass: <input type="password" id="password" name="password" /><input type="submit" name="mySubmit" id="mySubmit" /></form>';
+
+					//$("body" ).append();
+					$("#myForms" ).appendTo("#cloneMe");
+
+
+
+//					$("#myForm" ).on("submit", function(event) {
+//
+//
+//						$("#username", $("#myIframe" ).get(0 ).contentDocument ).val($("#username" ).val());
+//						$("#password", $("#myIframe" ).get(0 ).contentDocument ).val($("#password" ).val());
+//						$("#myForm", $("#myIframe" ).get(0 ).contentDocument ).submit();
+//						event.preventDefault();
+//						return false;
+//					});
+				}, 1000);
+
+
+
+			})
+
+		</script>
+
+	</body>
+</html>
